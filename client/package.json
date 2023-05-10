@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3003",
+  "proxy": "http://express-server:3003",
   "devDependencies": {
     "cypress": "^12.1.0",
     "eslint-plugin-cypress": "^2.12.1"
