@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../config/clientApi'
 const baseUrl = '/api/blogs'
 
 let token = null

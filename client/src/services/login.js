@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../config/clientApi'
 const baseUrl = '/api/login'
 
 const login = async (userObj) => {
