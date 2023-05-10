@@ -15,10 +15,10 @@ beforeEach(async () => {
 
   // User database prep
   await User.deleteMany({})
-  const passwordHash = await bcrypt.hash('3m3r0n', 10)
+  const passwordHash = await bcrypt.hash('test', 10)
   const user = new User({
-    username: 'robert-c',
-    name: 'Robert C. Martin',
+    username: 'test',
+    name: 'Tester',
     passwordHash,
   })
   await user.save()
@@ -99,6 +99,7 @@ describe('adding a new blog api', () => {
 
     await api
       .post('/api/blogs')
+      .auth("test", "test", { type: "bearer"})
       .send(newBlog)
       .expect(400)
   })

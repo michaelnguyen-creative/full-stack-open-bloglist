@@ -1,5 +1,7 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
+require('dotenv').config()
+
+if (process.env.NODE_ENV === 'production') {
+  require('dotenv').config({ path: process.env.BACKEND_SECRETS_FILE })
 }
 
 const PORT = process.env.PORT || 3000
